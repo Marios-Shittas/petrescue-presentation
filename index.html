@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetRescue App — Παρουσίαση Πτυχιακής Ιδέας</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-orb orb-1"></div>
+  <div class="background-orb orb-2"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/Icon.png" alt="PetRescue App logo" class="brand-logo" />
+      <div>
+        <p class="brand-eyebrow">Πτυχιακή Πρόταση</p>
+        <h1>PetRescue App</h1>
+      </div>
+    </div>
+
+    <nav class="topnav" id="topNav">
+      <a href="#hero">Αρχή</a>
+      <a href="#idea">Ιδέα</a>
+      <a href="#problem">Πρόβλημα</a>
+      <a href="#flow">Λειτουργία</a>
+      <a href="#features">Χαρακτηριστικά</a>
+      <a href="#business">Διάσταση</a>
+      <a href="#roadmap">Υλοποίηση</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Μενού πλοήγησης">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero panel visible" id="hero">
+      <div class="hero-text reveal">
+        <div class="chip">Ψηφιακή πλατφόρμα ειδοποίησης για χαμένα κατοικίδια</div>
+        <h2>Άμεση ενημέρωση, χάρτης, γεωγραφική ακτίνα και ειδοποιήσεις σε πραγματικό χρόνο.</h2>
+        <p>
+          Μια σύγχρονη web εφαρμογή που αντικαθιστά τις παραδοσιακές αφίσες με στοχευμένη,
+          γρήγορη και οργανωμένη ψηφιακή αναζήτηση χαμένων κατοικιδίων.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#idea" class="btn btn-primary">Έναρξη παρουσίασης</a>
+          <a href="#prototype" class="btn btn-secondary">Δες το πρωτότυπο</a>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <strong>Real-time</strong>
+            <span>Ειδοποιήσεις σε κοντινούς χρήστες</span>
+          </article>
+          <article class="stat-card">
+            <strong>Geo Radius</strong>
+            <span>Ακτίνα 1–2 km στοχευμένης αναζήτησης</span>
+          </article>
+          <article class="stat-card">
+            <strong>Map-based</strong>
+            <span>Χάρτης με προβολή αγγελιών</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="glass-card logo-showcase floating">
+          <img src="assets/Icon.png" alt="PetRescue Logo" />
+        </div>
+      </div>
+    </section>
+
+    <section class="panel split" id="idea">
+      <div class="section-heading reveal">
+        <span class="section-index">01</span>
+        <div>
+          <p class="section-kicker">Τίτλος ιδέας</p>
+          <h3>Ψηφιακή πλατφόρμα άμεσης ειδοποίησης για χαμένα κατοικίδια</h3>
+        </div>
+      </div>
+
+      <div class="content-grid two-cols">
+        <article class="glass-card reveal">
+          <h4>Σύντομη περιγραφή</h4>
+          <p>
+            Η εφαρμογή επιτρέπει στον ιδιοκτήτη να καταχωρεί άμεσα αγγελία για χαμένο κατοικίδιο,
+            με φωτογραφία, περιγραφή, τοποθεσία, πιθανή αμοιβή και στοιχεία επικοινωνίας.
+          </p>
+          <p>
+            Η αγγελία εμφανίζεται πάνω σε διαδραστικό χάρτη και οι χρήστες που βρίσκονται κοντά
+            στην περιοχή εξαφάνισης λαμβάνουν ειδοποίηση για να βοηθήσουν στον εντοπισμό.
+          </p>
+        </article>
+
+        <article class="glass-card reveal delay-1 emphasis-card">
+          <img src="assets/Prototype.png" alt="Πρωτότυπο εφαρμογής PetRescue" class="card-image" />
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="problem">
+      <div class="section-heading reveal">
+        <span class="section-index">02</span>
+        <div>
+          <p class="section-kicker">Το πρόβλημα που λύνει</p>
+          <h3>Από την αργή αφίσα στη στοχευμένη ψηφιακή ειδοποίηση</h3>
+        </div>
+      </div>
+
+      <div class="content-grid problem-layout">
+        <article class="glass-card reveal media-card">
+          <img src="assets/LostDog.jpeg" alt="Παραδοσιακή αφίσα χαμένου σκύλου" class="card-image tall" />
+        </article>
+
+        <article class="glass-card reveal delay-1">
+          <h4>Σημερινά προβλήματα</h4>
+          <ul class="feature-list">
+            <li>Η ενημέρωση του κοινού γίνεται με καθυστέρηση.</li>
+            <li>Οι αφίσες έχουν μικρή γεωγραφική εμβέλεια.</li>
+            <li>Δεν υπάρχει άμεση ειδοποίηση σε κοντινά άτομα.</li>
+            <li>Η πληροφορία δεν οργανώνεται κεντρικά.</li>
+            <li>Η προώθηση της αγγελίας είναι δύσκολη και αποσπασματική.</li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>Κρίσιμο σημείο:</strong>
+            <p>
+              Ο χρόνος είναι καθοριστικός. Όσο καθυστερεί η ενημέρωση, τόσο μειώνονται οι πιθανότητες
+              εντοπισμού του ζώου.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="flow">
+      <div class="section-heading reveal">
+        <span class="section-index">03</span>
+        <div>
+          <p class="section-kicker">Βασική λειτουργία</p>
+          <h3>Πώς λειτουργεί η εφαρμογή</h3>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-step reveal"><span>1</span><p>Ο χρήστης δηλώνει ότι έχασε το κατοικίδιό του.</p></article>
+        <article class="timeline-step reveal delay-1"><span>2</span><p>Συμπληρώνει είδος, φωτογραφία, όνομα, περιγραφή, περιοχή, ώρα, reward και στοιχεία επικοινωνίας.</p></article>
+        <article class="timeline-step reveal delay-2"><span>3</span><p>Η αγγελία εμφανίζεται άμεσα στον χάρτη.</p></article>
+        <article class="timeline-step reveal"><span>4</span><p>Ορίζεται ακτίνα αναζήτησης, π.χ. 1 ή 2 χιλιόμετρα.</p></article>
+        <article class="timeline-step reveal delay-1"><span>5</span><p>Κοντινοί χρήστες λαμβάνουν ειδοποίηση σε πραγματικό χρόνο.</p></article>
+        <article class="timeline-step reveal delay-2"><span>6</span><p>Όποιος δει το ζώο μπορεί να επικοινωνήσει ή να στείλει πιθανό σημείο εντοπισμού.</p></article>
+        <article class="timeline-step reveal"><span>7</span><p>Προαιρετικά, ο ιδιοκτήτης ενεργοποιεί πληρωμένη προώθηση για μεγαλύτερη προβολή.</p></article>
+      </div>
+    </section>
+
+    <section class="panel" id="features">
+      <div class="section-heading reveal">
+        <span class="section-index">04</span>
+        <div>
+          <p class="section-kicker">Ενδεικτικά χαρακτηριστικά υλοποίησης</p>
+          <h3>Τεχνικές και λειτουργικές δυνατότητες</h3>
+        </div>
+      </div>
+
+      <div class="cards-grid four-up">
+        <article class="glass-card reveal">
+          <h4>Διαχείριση χρηστών</h4>
+          <p>Εγγραφή, σύνδεση και ασφαλής διαχείριση λογαριασμών.</p>
+        </article>
+        <article class="glass-card reveal delay-1">
+          <h4>Αγγελίες & Χάρτης</h4>
+          <p>Δημιουργία αγγελίας και προβολή σε map interface με φίλτρα.</p>
+        </article>
+        <article class="glass-card reveal delay-2">
+          <h4>Location-based alerts</h4>
+          <p>Ειδοποιήσεις βάσει τοποθεσίας σε κοντινούς χρήστες.</p>
+        </article>
+        <article class="glass-card reveal">
+          <h4>Αναφορές θεάσεων</h4>
+          <p>Υποβολή αναφορών από χρήστες που είδαν το ζώο.</p>
+        </article>
+        <article class="glass-card reveal delay-1">
+          <h4>Κατάσταση “Βρέθηκε”</h4>
+          <p>Επισήμανση και αυτόματη απενεργοποίηση ενεργών ειδοποιήσεων.</p>
+        </article>
+        <article class="glass-card reveal delay-2">
+          <h4>Έλεγχος αξιοπιστίας</h4>
+          <p>Πιθανή επιβεβαίωση στοιχείων για μείωση ψεύτικων αγγελιών.</p>
+        </article>
+        <article class="glass-card reveal">
+          <h4>Boost listing</h4>
+          <p>Πληρωμένη προώθηση για υψηλότερη προβολή αγγελίας.</p>
+        </article>
+        <article class="glass-card reveal delay-1">
+          <h4>Responsive σχεδίαση</h4>
+          <p>Ομοιόμορφη εμπειρία σε υπολογιστή, tablet και κινητό.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel prototype-panel" id="prototype">
+      <div class="section-heading reveal">
+        <span class="section-index">05</span>
+        <div>
+          <p class="section-kicker">Οπτικό πρωτότυπο</p>
+          <h3>Responsive web εμπειρία με mobile-first λογική</h3>
+        </div>
+      </div>
+
+      <article class="glass-card reveal large-media-card">
+        <img src="assets/Prototype.png" alt="Responsive prototype του PetRescue App" class="card-image" />
+      </article>
+    </section>
+
+    <section class="panel split" id="business">
+      <div class="section-heading reveal">
+        <span class="section-index">06</span>
+        <div>
+          <p class="section-kicker">Καινοτομία και επιχειρηματική διάσταση</p>
+          <h3>Όχι απλά αγγελίες, αλλά ένα ολοκληρωμένο ψηφιακό οικοσύστημα</h3>
+        </div>
+      </div>
+
+      <div class="content-grid two-cols">
+        <article class="glass-card reveal">
+          <h4>Καινοτομία / Αξία</h4>
+          <ul class="feature-list compact">
+            <li>Συνδυασμός γεωεντοπισμού και διαδραστικού χάρτη</li>
+            <li>Ειδοποιήσεις σε πραγματικό χρόνο</li>
+            <li>Στοχευμένη ενημέρωση κοντινών χρηστών</li>
+            <li>Κεντρική οργάνωση πληροφορίας</li>
+            <li>Δυνατότητα προώθησης αγγελίας</li>
+          </ul>
+        </article>
+
+        <article class="glass-card reveal delay-1">
+          <h4>Οικονομική / πρακτική προοπτική</h4>
+          <ul class="feature-list compact">
+            <li>Δωρεάν βασική καταχώριση</li>
+            <li>Πληρωμένη προβολή αγγελιών</li>
+            <li>Συνεργασίες με κτηνιάτρους και pet shops</li>
+            <li>Συνεργασία με φιλοζωικές οργανώσεις</li>
+            <li>Χορηγούμενες εμφανίσεις και υποστηρικτικές υπηρεσίες</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="roadmap">
+      <div class="section-heading reveal">
+        <span class="section-index">07</span>
+        <div>
+          <p class="section-kicker">Προτεινόμενη πορεία υλοποίησης</p>
+          <h3>Πρώτα web εφαρμογή, μετά επέκταση σε mobile</h3>
+        </div>
+      </div>
+
+      <div class="roadmap-grid">
+        <article class="glass-card reveal">
+          <div class="roadmap-tag">Φάση 1</div>
+          <h4>Responsive Web App</h4>
+          <p>
+            Η πιο σωστή επιλογή για πτυχιακή, επειδή επιτρέπει γρήγορη ανάπτυξη,
+            εύκολη παρουσίαση και καλύτερη οργάνωση backend, βάσης δεδομένων, χάρτη και λογικής ειδοποιήσεων.
+          </p>
+        </article>
+
+        <article class="glass-card reveal delay-1">
+          <div class="roadmap-tag">Φάση 2</div>
+          <h4>Μελλοντική επέκταση</h4>
+          <p>
+            Με σωστό αρχιτεκτονικό σχεδιασμό, η εφαρμογή μπορεί αργότερα να μετατραπεί
+            σε mobile app ή Progressive Web App με εμπειρία κοντά σε native εφαρμογή.
+          </p>
+        </article>
+      </div>
+
+      <article class="glass-card conclusion reveal delay-2">
+        <h4>Συμπέρασμα</h4>
+        <p>
+          Το <strong>PetRescue App</strong> αποτελεί μια ρεαλιστική, κοινωνικά χρήσιμη και τεχνικά ενδιαφέρουσα πτυχιακή ιδέα,
+          συνδυάζοντας web ανάπτυξη, γεωεντοπισμό, real-time ενημέρωση, διαδραστικό UI και επιχειρηματική προοπτική.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Επιστροφή στην κορυφή">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
