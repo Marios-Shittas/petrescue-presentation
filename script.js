@@ -5,6 +5,7 @@ const progressBar = document.getElementById('progressBar');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const menuBtn = document.getElementById('menuBtn');
 const topNav = document.getElementById('topNav');
+const mobileNavBreakpoint = window.matchMedia('(max-width: 860px)');
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -35,28 +36,52 @@ const updateScrollUI = () => {
   const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   progressBar.style.width = `${progress}%`;
 
-  if (scrollTop > 500) {
+  if (scrollTopBtn && scrollTop > 500) {
     scrollTopBtn.classList.add('visible');
-  } else {
+  } else if (scrollTopBtn) {
     scrollTopBtn.classList.remove('visible');
   }
+};
+
+const closeMenu = () => {
+  topNav.classList.remove('open');
+  menuBtn.classList.remove('is-open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('nav-open');
+};
+
+const toggleMenu = () => {
+  const isOpen = topNav.classList.toggle('open');
+  menuBtn.classList.toggle('is-open', isOpen);
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('nav-open', isOpen);
 };
 
 window.addEventListener('scroll', updateScrollUI, { passive: true });
 window.addEventListener('load', updateScrollUI);
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
-menuBtn.addEventListener('click', () => {
-  topNav.classList.toggle('open');
-  document.body.classList.toggle('nav-open');
-});
+menuBtn.addEventListener('click', toggleMenu);
 
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    topNav.classList.remove('open');
-    document.body.classList.remove('nav-open');
+    closeMenu();
   });
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeMenu();
+  }
+});
+
+mobileNavBreakpoint.addEventListener('change', (event) => {
+  if (!event.matches) {
+    closeMenu();
+  }
 });

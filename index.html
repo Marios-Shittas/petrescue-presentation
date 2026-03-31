@@ -6,12 +6,14 @@
   <title>PetRescue App — Παρουσίαση Πτυχιακής Ιδέας</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="background-grid"></div>
   <div class="background-orb orb-1"></div>
   <div class="background-orb orb-2"></div>
+  <div class="background-orb orb-3"></div>
   <div class="progress-bar" id="progressBar"></div>
 
   <header class="topbar">
@@ -33,22 +35,41 @@
       <a href="#roadmap">Υλοποίηση</a>
     </nav>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Μενού πλοήγησης">
+    <button class="menu-btn" id="menuBtn" aria-label="Μενού πλοήγησης" aria-expanded="false" aria-controls="topNav">
       <span></span><span></span><span></span>
     </button>
   </header>
 
   <section class="presenter-banner" aria-label="Στοιχεία παρουσίασης">
-    <p><strong>Ονοματεπώνυμο:</strong> Μάριος Σιήττας</p>
-    <p><strong>Α.Φ.Τ:</strong> 27432</p>
-    <p><strong>Πτυχιακή:</strong> Τμήμα ΗΜΜΥΠ</p>
-    <p><strong>Καθηγητής:</strong> Μιχάλης Σιριβιανός, Κοσμήτορας Σχολής Μηχανικής και Τεχνολογίας</p>
+    <div class="banner-intro">
+      <p class="banner-label">Στοιχεία Παρουσίασης</p>
+      <h2>Πτυχιακή πρόταση με έμφαση σε καθαρή δομή, χρηστικότητα και σύγχρονο visual design.</h2>
+    </div>
+    <div class="presenter-grid">
+      <article class="presenter-item">
+        <span>Ονοματεπώνυμο</span>
+        <strong>Μάριος Σιήττας</strong>
+      </article>
+      <article class="presenter-item">
+        <span>Α.Φ.Τ</span>
+        <strong>27432</strong>
+      </article>
+      <article class="presenter-item">
+        <span>Πτυχιακή</span>
+        <strong>Τμήμα ΗΜΜΥΠ</strong>
+      </article>
+      <article class="presenter-item presenter-item-wide">
+        <span>Καθηγητής</span>
+        <strong>Μιχάλης Σιριβιανός, Κοσμήτορας Σχολής Μηχανικής και Τεχνολογίας</strong>
+      </article>
+    </div>
   </section>
 
   <main>
     <section class="hero panel visible" id="hero">
       <div class="hero-text reveal">
         <div class="chip">Ψηφιακή πλατφόρμα ειδοποίησης για χαμένα κατοικίδια</div>
+        <p class="hero-kicker">Presentation Microsite</p>
         <h2>Άμεση ενημέρωση, χάρτης, γεωγραφική ακτίνα και ειδοποιήσεις σε πραγματικό χρόνο.</h2>
         <p>
           Μια σύγχρονη web εφαρμογή που αντικαθιστά τις παραδοσιακές αφίσες με στοχευμένη,
@@ -77,8 +98,18 @@
       </div>
 
       <div class="hero-visual reveal delay-1">
-        <div class="glass-card logo-showcase floating">
-          <img src="assets/Icon.png" alt="PetRescue Logo" />
+        <div class="hero-stage floating">
+          <div class="hero-badge hero-badge-top">Live Alerts</div>
+          <article class="glass-card logo-showcase">
+            <div class="showcase-ring"></div>
+            <img src="assets/Icon.png" alt="PetRescue Logo" />
+          </article>
+          <article class="glass-card prototype-showcase">
+            <div class="prototype-frame">
+              <img src="assets/Prototype.png" alt="Πρωτότυπο εφαρμογής PetRescue" class="card-image" />
+            </div>
+          </article>
+          <div class="hero-badge hero-badge-bottom">Map • Radius • Rescue</div>
         </div>
       </div>
     </section>
@@ -123,6 +154,7 @@
       <div class="content-grid problem-layout">
         <article class="glass-card reveal media-card">
           <img src="assets/LostDog.jpeg" alt="Παραδοσιακή αφίσα χαμένου σκύλου" class="card-image tall" />
+          <p class="media-caption"><span class="caption-label">Σημείωση φωτογραφίας</span>Η φωτογραφία είναι έξω από τη βιβλιοθήκη του ΤΕΠΑΚ και δείχνει ανακοίνωση για χαμένο κατοικίδιο.</p>
         </article>
 
         <article class="glass-card reveal delay-1">
@@ -294,6 +326,30 @@
           Το <strong>PetRescue App</strong> αποτελεί μια ρεαλιστική, κοινωνικά χρήσιμη και τεχνικά ενδιαφέρουσα πτυχιακή ιδέα,
           συνδυάζοντας web ανάπτυξη, γεωεντοπισμό, real-time ενημέρωση, διαδραστικό UI και επιχειρηματική προοπτική.
         </p>
+      </article>
+    </section>
+
+    <section class="panel" id="transcript">
+      <div class="section-heading reveal">
+        <span class="section-index">08</span>
+        <div>
+          <p class="section-kicker">Περίληψη Εργασίας</p>
+          <h3>Τι αφορά η εργασία, με απλά λόγια</h3>
+        </div>
+      </div>
+
+      <article class="glass-card reveal transcript-card">
+        <p>
+          Η εργασία αφορά την ανάπτυξη μιας web εφαρμογής με όνομα <strong>PetRescue</strong>,
+          που βοηθά στον πιο γρήγορο εντοπισμό χαμένων κατοικιδίων.
+        </p>
+        <ul class="feature-list transcript-list">
+          <li>Ο ιδιοκτήτης ανεβάζει άμεσα αγγελία με φωτογραφία, περιγραφή και τοποθεσία.</li>
+          <li>Η αγγελία εμφανίζεται σε χάρτη και ενημερώνονται χρήστες που βρίσκονται κοντά.</li>
+          <li>Οι ειδοποιήσεις γίνονται σε πραγματικό χρόνο, ώστε να μειωθεί η καθυστέρηση.</li>
+          <li>Η πληροφορία οργανώνεται σε μία κεντρική πλατφόρμα αντί για μεμονωμένες αφίσες.</li>
+          <li>Η λύση είναι κοινωνικά χρήσιμη και μπορεί να επεκταθεί μελλοντικά σε mobile εφαρμογή.</li>
+        </ul>
       </article>
     </section>
   </main>
